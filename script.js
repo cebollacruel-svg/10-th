@@ -144,6 +144,7 @@ const score100 = Math.round((score/total)*100);
 const examPercent = ((score/total)*10).toFixed(1);
 
 guardarEnGoogleSheets({
+exam: "10th",
 nombre: studentName,
 puntaje: `${score}/${total} points — ${score100} score — ${examPercent}/10 %`
 });
