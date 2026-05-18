@@ -41,10 +41,10 @@ class AudioController {
 const answers = {
     q1:"c",  q2:"b",  q3:"d",
     q4:"b",  q5:"a",  q6:"c",
-    q7:"a",  q8:"b",  q9:"d",
-    q10:"c", q11:"a", q12:"b",
-    q13:"b", q14:"c", q15:"a",
-    q16:"b", q17:"d", q18:"a"
+    q7:"a",  q8:"b",  q9:"b",
+    q10:"a", q11:"c", q12:"a",
+    q13:"b", q14:"b", q15:"a",
+    q16:"b", q17:"a", q18:"c"
 };
 
 /* =========================================
@@ -78,9 +78,9 @@ const container = document.getElementById("questions-container");
 
 const questions = [
 
-["Where does the speaker work?",["At a school","At a restaurant","At a hospital","At a bank"]],
-["What does he repair?",["Phones","Computers","Cars","TVs"]],
-["What time does he get home?",["5:30","6:00","7:00","6:30"]],
+["Where does the technician work?",["At a school","At a restaurant","At a hospital","At a bank"]],
+["What does she repair?",["Phones","Computers","Cars","TVs"]],
+["What time does she get home?",["5:30","6:00","7:00","6:30"]],
 
 ["What is Charlie's mother’s job?",["Doctor","Journalist","Teacher","Lawyer"]],
 ["Where does she work?",["The Times","A hospital","A school","A website"]],
