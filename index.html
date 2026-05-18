@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listening Exam - Colegio Nocturno de Cariari (10th)</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Listening Exam - 10th Grade</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,236 +13,34 @@
 
 <main class="wrapper">
 
-    <section class="intro">
-        <p><strong>Teacher:</strong> Saiden Ortiz Gómez &nbsp;|&nbsp; <strong>Total Points:</strong> 18 (10%) &nbsp;|&nbsp; <strong>Allotted Time:</strong> one lesson</p>
-        <p><strong>Instructions:</strong> This exam has 6 audios. You will hear each audio and answer 3 questions about it. Each audio can be played <strong>up to 4 times only</strong>. Choose the correct answer for each question.</p>
+<section class="intro">
+<p><strong>Teacher:</strong> Saiden Ortiz Gómez | <strong>Total Points:</strong> 18 (10%)</p>
+<p><strong>Instructions:</strong> Listen carefully. Each audio can be played <strong>4 times only</strong>. Choose the correct answer.</p>
 
-        <div class="student-info">
-            <label for="studentName">Student's Name *</label>
-            <input type="text" id="studentName" placeholder="Write your full name" required>
-        </div>
-    </section>
+<div class="student-info">
+<label for="studentName">Student's Name *</label>
+<input type="text" id="studentName" placeholder="Write your full name" required>
+</div>
+</section>
 
-    <form id="quizForm">
+<form id="quizForm">
 
-        <h2 class="section-title">Multiple Choice — 18 points</h2>
+<h2 class="section-title">Multiple Choice — 18 points</h2>
 
-        <!-- ============ AUDIO 1 (Q1-3) — Hospital technician ============ -->
-        <section class="audio-card">
-            <p class="directions">Instructions: You will hear a person talking about their job. Choose the correct answer for each question.</p>
-            <audio id="audio1"><source src="audio1.mp3" type="audio/mpeg"></audio>
-            <div class="audio-controls">
-                <button type="button" class="play-btn" id="playBtn1">Play Audio</button>
-                <span class="counter" id="counter1">Remaining plays: 4</span>
-            </div>
-        </section>
+<div id="questions-container"></div>
 
-        <article class="question">
-            <h2>1. What is the speaker's job?</h2>
-            <label class="option"><input type="radio" name="q1" value="a"> A) Doctor</label>
-            <label class="option"><input type="radio" name="q1" value="b"> B) Nurse</label>
-            <label class="option"><input type="radio" name="q1" value="c"> C) Computer technician</label>
-            <label class="option"><input type="radio" name="q1" value="d"> D) Receptionist</label>
-        </article>
+<div class="submit-wrap">
+<button type="submit" class="submit-btn">Check Answers</button>
+</div>
 
-        <article class="question">
-            <h2>2. What time does the speaker usually arrive home?</h2>
-            <label class="option"><input type="radio" name="q2" value="a"> A) At 5:00</label>
-            <label class="option"><input type="radio" name="q2" value="b"> B) At 5:30</label>
-            <label class="option"><input type="radio" name="q2" value="c"> C) At 6:00</label>
-            <label class="option"><input type="radio" name="q2" value="d"> D) At 6:30</label>
-        </article>
+<div id="saveStatus" class="save-status"></div>
 
-        <article class="question">
-            <h2>3. Why does the speaker often stay later than 5:00 PM?</h2>
-            <label class="option"><input type="radio" name="q3" value="a"> A) Because traffic is heavy</label>
-            <label class="option"><input type="radio" name="q3" value="b"> B) Because he can't leave a job half-finished</label>
-            <label class="option"><input type="radio" name="q3" value="c"> C) Because the night workers arrive late</label>
-            <label class="option"><input type="radio" name="q3" value="d"> D) Because he likes to talk to the nurses</label>
-        </article>
-
-        <!-- ============ AUDIO 2 (Q4-6) — Jobs / family ============ -->
-        <section class="audio-card">
-            <p class="directions">Instructions: You will hear two friends talking about future jobs and their families. Choose the correct answer for each question.</p>
-            <audio id="audio2"><source src="audio2.mp3" type="audio/mpeg"></audio>
-            <div class="audio-controls">
-                <button type="button" class="play-btn" id="playBtn2">Play Audio</button>
-                <span class="counter" id="counter2">Remaining plays: 4</span>
-            </div>
-        </section>
-
-        <article class="question">
-            <h2>4. What does Charlie's mother do?</h2>
-            <label class="option"><input type="radio" name="q4" value="a"> A) She is a doctor</label>
-            <label class="option"><input type="radio" name="q4" value="b"> B) She is a journalist</label>
-            <label class="option"><input type="radio" name="q4" value="c"> C) She is a photographer</label>
-            <label class="option"><input type="radio" name="q4" value="d"> D) She is a footballer</label>
-        </article>
-
-        <article class="question">
-            <h2>5. What does Amelia want to be in the future?</h2>
-            <label class="option"><input type="radio" name="q5" value="a"> A) A journalist</label>
-            <label class="option"><input type="radio" name="q5" value="b"> B) A doctor</label>
-            <label class="option"><input type="radio" name="q5" value="c"> C) A footballer</label>
-            <label class="option"><input type="radio" name="q5" value="d"> D) A photographer</label>
-        </article>
-
-        <article class="question">
-            <h2>6. What is special about Charlie's father's photos?</h2>
-            <label class="option"><input type="radio" name="q6" value="a"> A) They are all in colour</label>
-            <label class="option"><input type="radio" name="q6" value="b"> B) They are all of football matches</label>
-            <label class="option"><input type="radio" name="q6" value="c"> C) They are all in black and white</label>
-            <label class="option"><input type="radio" name="q6" value="d"> D) They are all very small</label>
-        </article>
-
-        <!-- ============ AUDIO 3 (Q7-9) — Daily routine ============ -->
-        <section class="audio-card">
-            <p class="directions">Instructions: You will hear two friends talking about a daily routine. Choose the correct answer for each question.</p>
-            <audio id="audio3"><source src="audio3.mp3" type="audio/mpeg"></audio>
-            <div class="audio-controls">
-                <button type="button" class="play-btn" id="playBtn3">Play Audio</button>
-                <span class="counter" id="counter3">Remaining plays: 4</span>
-            </div>
-        </section>
-
-        <article class="question">
-            <h2>7. What does Tom do for a living?</h2>
-            <label class="option"><input type="radio" name="q7" value="a"> A) He works at a hospital</label>
-            <label class="option"><input type="radio" name="q7" value="b"> B) He is a primary school teacher</label>
-            <label class="option"><input type="radio" name="q7" value="c"> C) He works at a gym</label>
-            <label class="option"><input type="radio" name="q7" value="d"> D) He is a dog walker</label>
-        </article>
-
-        <article class="question">
-            <h2>8. How many classes does Tom have every day?</h2>
-            <label class="option"><input type="radio" name="q8" value="a"> A) Three</label>
-            <label class="option"><input type="radio" name="q8" value="b"> B) Four</label>
-            <label class="option"><input type="radio" name="q8" value="c"> C) Five</label>
-            <label class="option"><input type="radio" name="q8" value="d"> D) Six</label>
-        </article>
-
-        <article class="question">
-            <h2>9. What does Tom usually do in the evenings to relax?</h2>
-            <label class="option"><input type="radio" name="q9" value="a"> A) He goes to the gym</label>
-            <label class="option"><input type="radio" name="q9" value="b"> B) He cooks dinner with friends</label>
-            <label class="option"><input type="radio" name="q9" value="c"> C) He reads, watches TV or walks his dog</label>
-            <label class="option"><input type="radio" name="q9" value="d"> D) He goes to bed very early</label>
-        </article>
-
-        <!-- ============ AUDIO 4 (Q10-12) — Cinema plans ============ -->
-        <section class="audio-card">
-            <p class="directions">Instructions: You will hear two friends planning to go to the cinema. Choose the correct answer for each question.</p>
-            <audio id="audio4"><source src="audio4.mp3" type="audio/mpeg"></audio>
-            <div class="audio-controls">
-                <button type="button" class="play-btn" id="playBtn4">Play Audio</button>
-                <span class="counter" id="counter4">Remaining plays: 4</span>
-            </div>
-        </section>
-
-        <article class="question">
-            <h2>10. Why is Ismael feeling tired or busy?</h2>
-            <label class="option"><input type="radio" name="q10" value="a"> A) Because he has a lot of homework</label>
-            <label class="option"><input type="radio" name="q10" value="b"> B) Because he is sick</label>
-            <label class="option"><input type="radio" name="q10" value="c"> C) Because he went to the cinema yesterday</label>
-            <label class="option"><input type="radio" name="q10" value="d"> D) Because he works late</label>
-        </article>
-
-        <article class="question">
-            <h2>11. What type of film do Jack and Ismael finally agree to watch?</h2>
-            <label class="option"><input type="radio" name="q11" value="a"> A) Horror</label>
-            <label class="option"><input type="radio" name="q11" value="b"> B) Romantic comedy</label>
-            <label class="option"><input type="radio" name="q11" value="c"> C) Comedy about a school</label>
-            <label class="option"><input type="radio" name="q11" value="d"> D) Science fiction</label>
-        </article>
-
-        <article class="question">
-            <h2>12. What time will they meet at the cinema?</h2>
-            <label class="option"><input type="radio" name="q12" value="a"> A) At 7:00</label>
-            <label class="option"><input type="radio" name="q12" value="b"> B) At 7:30</label>
-            <label class="option"><input type="radio" name="q12" value="c"> C) At 8:00</label>
-            <label class="option"><input type="radio" name="q12" value="d"> D) At 8:30</label>
-        </article>
-
-        <!-- ============ AUDIO 5 (Q13-15) — Scary movie phone call ============ -->
-        <section class="audio-card">
-            <p class="directions">Instructions: You will hear a phone conversation between two friends. Choose the correct answer for each question.</p>
-            <audio id="audio5"><source src="audio5.mp3" type="audio/mpeg"></audio>
-            <div class="audio-controls">
-                <button type="button" class="play-btn" id="playBtn5">Play Audio</button>
-                <span class="counter" id="counter5">Remaining plays: 4</span>
-            </div>
-        </section>
-
-        <article class="question">
-            <h2>13. Why is Tina feeling scared?</h2>
-            <label class="option"><input type="radio" name="q13" value="a"> A) She heard a strange noise</label>
-            <label class="option"><input type="radio" name="q13" value="b"> B) She just watched a scary movie</label>
-            <label class="option"><input type="radio" name="q13" value="c"> C) The lights went out at her house</label>
-            <label class="option"><input type="radio" name="q13" value="d"> D) Someone is knocking at her door</label>
-        </article>
-
-        <article class="question">
-            <h2>14. What does Tina suggest they do together?</h2>
-            <label class="option"><input type="radio" name="q14" value="a"> A) Watch another horror film</label>
-            <label class="option"><input type="radio" name="q14" value="b"> B) Watch a comedy</label>
-            <label class="option"><input type="radio" name="q14" value="c"> C) Go to the cinema</label>
-            <label class="option"><input type="radio" name="q14" value="d"> D) Go for a walk outside</label>
-        </article>
-
-        <article class="question">
-            <h2>15. About how long will it take her friend to arrive?</h2>
-            <label class="option"><input type="radio" name="q15" value="a"> A) 10 minutes</label>
-            <label class="option"><input type="radio" name="q15" value="b"> B) 20 minutes</label>
-            <label class="option"><input type="radio" name="q15" value="c"> C) 30 minutes</label>
-            <label class="option"><input type="radio" name="q15" value="d"> D) One hour</label>
-        </article>
-
-        <!-- ============ AUDIO 6 (Q16-18) — Choosing a film ============ -->
-        <section class="audio-card">
-            <p class="directions">Instructions: You will hear two friends choosing a film to watch. Choose the correct answer for each question.</p>
-            <audio id="audio6"><source src="audio6.mp3" type="audio/mpeg"></audio>
-            <div class="audio-controls">
-                <button type="button" class="play-btn" id="playBtn6">Play Audio</button>
-                <span class="counter" id="counter6">Remaining plays: 4</span>
-            </div>
-        </section>
-
-        <article class="question">
-            <h2>16. Which film has Mario ALREADY seen?</h2>
-            <label class="option"><input type="radio" name="q16" value="a"> A) War Games</label>
-            <label class="option"><input type="radio" name="q16" value="b"> B) Mr and Mrs Jones</label>
-            <label class="option"><input type="radio" name="q16" value="c"> C) Robot 2075</label>
-            <label class="option"><input type="radio" name="q16" value="d"> D) Midnight Moon</label>
-        </article>
-
-        <article class="question">
-            <h2>17. What kind of film is "Midnight Moon"?</h2>
-            <label class="option"><input type="radio" name="q17" value="a"> A) Action</label>
-            <label class="option"><input type="radio" name="q17" value="b"> B) Science fiction</label>
-            <label class="option"><input type="radio" name="q17" value="c"> C) Romantic comedy</label>
-            <label class="option"><input type="radio" name="q17" value="d"> D) Horror</label>
-        </article>
-
-        <article class="question">
-            <h2>18. What time do Mario and Tamara agree to meet at the cinema?</h2>
-            <label class="option"><input type="radio" name="q18" value="a"> A) 7:00</label>
-            <label class="option"><input type="radio" name="q18" value="b"> B) 7:30</label>
-            <label class="option"><input type="radio" name="q18" value="c"> C) 12:00</label>
-            <label class="option"><input type="radio" name="q18" value="d"> D) 2:30</label>
-        </article>
-
-        <div class="submit-wrap">
-            <button type="submit" class="submit-btn">Check Answers</button>
-        </div>
-
-        <div id="saveStatus" class="save-status"></div>
-
-    </form>
+</form>
 
 </main>
 
 <footer class="site-footer">
-    <p>Colegio Nocturno de Cariari · Listening Exam I · Teacher: Saiden Ortiz Gómez</p>
+<p>Colegio Nocturno de Cariari · Listening Exam I · Teacher: Saiden Ortiz Gómez</p>
 </footer>
 
 <script src="script.js"></script>
