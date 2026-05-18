@@ -39,25 +39,25 @@ class AudioController {
    ANSWER KEY
 ========================================= */
 const answers = {
-    q1:"c",
-    q2:"b",
-    q3:"d",
-    q4:"b",
-    q5:"a",
-    q6:"c",
-    q7:"a",
-    q8:"b",
-    q9:"d",
-    q10:"c",
-    q11:"a",
-    q12:"b",
-    q13:"b",
-    q14:"c",
-    q15:"a",
-    q16:"b",
-    q17:"d",
-    q18:"a"
+    q1:"c",  q2:"b",  q3:"d",
+    q4:"b",  q5:"a",  q6:"c",
+    q7:"a",  q8:"b",  q9:"d",
+    q10:"c", q11:"a", q12:"b",
+    q13:"b", q14:"c", q15:"a",
+    q16:"b", q17:"d", q18:"a"
 };
+
+/* =========================================
+   AUDIO-SPECIFIC INSTRUCTIONS
+========================================= */
+const audioInstructions = [
+    "Instructions: You will hear a person talking about their job. Choose the correct answer for each question.",
+    "Instructions: You will hear a conversation between two friends. Choose the correct answer for each question.",
+    "Instructions: You will hear a conversation about a daily routine. Choose the correct answer for each question.",
+    "Instructions: You will hear a conversation between two friends making plans. Choose the correct answer for each question.",
+    "Instructions: You will hear a phone conversation between two friends. Choose the correct answer for each question.",
+    "Instructions: You will hear an announcement. Choose the correct answer for each question."
+];
 
 /* =========================================
    BUILD EXAM
@@ -109,9 +109,11 @@ let audio = 1;
 
 for(let i=0;i<questions.length;i+=3){
 
+const instruction = audioInstructions[audio - 1];
+
 container.innerHTML += `
 <section class="audio-card">
-<p class="directions">Listen carefully and answer questions ${q}-${q+2}</p>
+<p class="directions">${instruction}</p>
 <audio id="audio${audio}">
 <source src="audio${audio}.mp3" type="audio/mpeg">
 </audio>
