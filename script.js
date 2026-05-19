@@ -4,7 +4,7 @@ const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby2qTBUwWN5_zsB
    AUDIO CONTROLLER
 ========================================= */
 class AudioController {
-    constructor(audioId, buttonId, counterId, maxPlays = 4) {
+    constructor(audioId, buttonId, counterId, maxPlays = 3) {
         this.audio = document.getElementById(audioId);
         this.button = document.getElementById(buttonId);
         this.counter = document.getElementById(counterId);
@@ -94,7 +94,7 @@ const questions = [
 ["Which movie do they choose?",["Comedy","Horror","Science fiction","Romantic comedy"]],
 ["What time will they meet?",["7:30","8:30","6:30","9:00"]],
 
-["Why does Tina call?",["She is excited","She is scared","She is bored","She is tired"]],
+["Why does Tina call?",["She is excited","She is scared.","She is bored.","She is tired."]],
 ["What movie did she watch?",["Titanic","The Sixth Sense","Frozen","Avatar"]],
 ["What type of movie will they watch next?",["Comedy","Horror","Action","Drama"]],
 
