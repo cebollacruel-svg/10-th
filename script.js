@@ -26,7 +26,7 @@ class AudioController {
 
     updateUI() {
         const remaining = this.maxPlays - this.plays;
-        this.counter.textContent = "Remaining plays: " + remaining;
+        this.counter.textContent = "Remaining plays 3: " + remaining;
 
         if (this.plays >= this.maxPlays) {
             this.button.disabled = true;
