@@ -26,7 +26,7 @@ class AudioController {
 
     updateUI() {
         const remaining = this.maxPlays - this.plays;
-        this.counter.textContent = "Remaining plays 3: " + remaining;
+        this.counter.textContent = "Remaining plays : " + remaining;
 
         if (this.plays >= this.maxPlays) {
             this.button.disabled = true;
@@ -94,7 +94,7 @@ const questions = [
 ["Which movie do they choose?",["Comedy","Horror","Science fiction","Romantic comedy"]],
 ["What time will they meet?",["7:30","8:30","6:30","9:00"]],
 
-["Why does Tina call?",["She is excited","She is scared.","She is bored.","She is tired."]],
+["Why does Tina call?",["She is excited.","She is scared.","She is bored.","She is tired."]],
 ["What movie did she watch?",["Titanic","The Sixth Sense","Frozen","Avatar"]],
 ["What type of movie will they watch next?",["Comedy","Horror","Action","Drama"]],
 
