@@ -119,7 +119,7 @@ container.innerHTML += `
 </audio>
 <div class="audio-controls">
 <button type="button" class="play-btn" id="playBtn${audio}">Play Audio</button>
-<span class="counter" id="counter${audio}">Remaining plays: 4</span>
+<span class="counter" id="counter${audio}">Remaining plays: 3</span>
 </div>
 </section>
 `;
