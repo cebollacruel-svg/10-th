@@ -163,12 +163,25 @@ function checkAnswers(event){
     let score = 0;
     const total = 18;
 
-    for(const key in answers){
+    // Construir el detalle pregunta por pregunta
+    let detalleArray = [];
+
+    for(let n = 1; n <= total; n++){
+        const key = "q" + n;
         const selected = document.querySelector(`input[name="${key}"]:checked`);
-        if(selected && selected.value === answers[key]){
+        const studentAnswer = selected ? selected.value.toUpperCase() : "—";
+        const correctAnswer = answers[key].toUpperCase();
+        const isCorrect = selected && selected.value === answers[key];
+
+        if(isCorrect){
             score++;
+            detalleArray.push(`Q${n}: ${studentAnswer} ✓`);
+        } else {
+            detalleArray.push(`Q${n}: ${studentAnswer} ✗ (correct: ${correctAnswer})`);
         }
     }
+
+    const detalle = detalleArray.join("  |  ");
 
     const score100 = Math.round((score / total) * 100);
     const examPercent = ((score / total) * 10).toFixed(1);
@@ -176,7 +189,8 @@ function checkAnswers(event){
     guardarEnGoogleSheets({
         exam: "10th",
         nombre: studentName,
-        puntaje: `${score}/${total} points — ${score100} score — ${examPercent}/10 %`
+        puntaje: `${score}/${total} points — ${score100} score — ${examPercent}/10 %`,
+        detalle: detalle
     });
 
     bloquearExamen();
